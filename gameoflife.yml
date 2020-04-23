@@ -17,7 +17,7 @@
         artifact_id: gameoflife
         version: "0.0.3"
         extension: war
-        repository_url: http://18.218.3.49:8081/nexus/content/repositories/releases/
+        repository_url: http://18.218.3.49:8081/nexus/content/repositories/releases
         username: admin
         password: admin123
         dest: /etc/gameoflife
