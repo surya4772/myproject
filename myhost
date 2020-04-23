@@ -1,0 +1,2 @@
+[test]
+test1 ansible_ssh_host=172.31.0.219 ansible_ssh_user=root

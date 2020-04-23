@@ -1,0 +1,28 @@
+---
+- hosts: test1
+  tasks:
+    - name: Installing Java
+      yum:
+        name: java-1.8.0
+        state: latest
+
+    - name: Creating folder
+      file:
+        path: /etc/gameoflife
+        state: directory
+
+    - name: Downloading artifact from nexus
+      maven_artifact:
+        group_id: be.cegeka
+        artifact_id: gameoflife
+        version: 0.0.3
+        repositort_url: http://18.218.3.49:8081/nexus/content/repositories/releases/
+        username: admin
+        password: admin123
+        dest: /etc/gameoflife
+
+    - name: running war file
+      shell: nohup java - jar gameoflife-0.0.3.war &
+      args:
+        chdir: /etc/gameoflife
+ 
