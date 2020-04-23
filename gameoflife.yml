@@ -16,7 +16,7 @@
         group_id: be.cegeka
         artifact_id: gameoflife
         version: 0.0.3
-        repositort_url: http://18.218.3.49:8081/nexus/content/repositories/releases/
+        repository_url: http://18.218.3.49:8081/nexus/content/repositories/releases/
         username: admin
         password: admin123
         dest: /etc/gameoflife
